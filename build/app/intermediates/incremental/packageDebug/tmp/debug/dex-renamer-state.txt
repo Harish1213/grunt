@@ -1,0 +1,4 @@
+#Tue Apr 21 03:04:57 IST 2020
+base.0=/Users/harshrajput/Documents/hArsh/WorkHome/flutter/grunt/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
