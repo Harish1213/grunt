@@ -43,7 +43,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets :
-  - asset/Images
+  - asset/Images/
 
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
@@ -63,7 +63,7 @@ flutter:
   fonts:
     - family: Roboto_Condensed     
       fonts:
-        - asset: asset/Font/Roboto_Condensed/
+        - asset: asset/Font/Roboto_Condensed/RobotoCondensed-BoldItalic.ttf
         #RobotoCondensed-Italic.ttf
   
   #   - family: Trajan Pro
