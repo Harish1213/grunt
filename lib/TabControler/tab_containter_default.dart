@@ -52,6 +52,7 @@ class _TabContainerDefaultState extends State<TabContainerDefault> {
             ],
           ),
           backgroundColor: Theme.of(context).primaryColor,
+          
         ),
       ),
     );

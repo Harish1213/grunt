@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'HomeVC.dart';
-import 'package:grunt/Controlers/screens/tab1.dart';
-import 'package:grunt/Controlers/screens/tab2.dart';
-import 'package:grunt/Controlers/screens/tab3.dart';
-
 
 class LoginVC extends StatefulWidget {
   LoginVC({Key key, this.title}) : super(key: key);
@@ -24,10 +20,16 @@ class LoginPageState extends State<LoginVC> {
       print('user enter');
       print(userEmail);
       Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => HomeVC()),
-          );
-       FocusScope.of(context).unfocus();
+        context,
+        MaterialPageRoute(
+            builder: (context) => HomeVC(), fullscreenDialog: true),
+      );
+
+      // Navigator.push(
+      //       context,
+      //       MaterialPageRoute(builder: (context) => HomeVC()),
+      //     );
+      //  FocusScope.of(context).unfocus();
     });
   }
 
