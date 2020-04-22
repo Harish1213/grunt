@@ -36,14 +36,17 @@ class LoginPageState extends State<LoginVC> {
   @override
   Widget build(BuildContext context) {
     final emailFild = TextField(
+      
       onChanged: (txtValue) {
         userEmail = txtValue;
       },
       obscureText: false,
       style: style,
+      
       decoration: InputDecoration(
+          fillColor:Colors.grey ,
           contentPadding: EdgeInsets.all(20.0),
-          hintText: 'Email',
+          labelText: 'Email',
           border: OutlineInputBorder()),
     );
     final password = TextField(
