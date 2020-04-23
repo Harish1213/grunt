@@ -15,10 +15,14 @@ class _Tab1State extends State<Tab1> with AutomaticKeepAliveClientMixin<Tab1> {
     print('initState Tab1');
   }
 
-
+  List<Avengers> avengers;
+  List<Avengers> selectedAvengers;
+  bool sort;
   @override
   Widget build(BuildContext context) {
     print('build Tab1');
+
+  
     return Scaffold(
       drawer: NavDrawer(),
       appBar: AppBar(
@@ -34,12 +38,7 @@ class _Tab1State extends State<Tab1> with AutomaticKeepAliveClientMixin<Tab1> {
               _showAlert(context);
             }),
       ),
-      body: Center(
-        child: Text(
-          'This is content of Tab1',
-          style: TextStyle(fontSize: 30),
-        ),
-      ),
+      body: Text('data'),
     );
   }
 
@@ -52,7 +51,6 @@ class _Tab1State extends State<Tab1> with AutomaticKeepAliveClientMixin<Tab1> {
             ));
   }
 
-
   final snackBar = SnackBar(
     content: Text('Yay! A SnackBar!'),
     action: SnackBarAction(
@@ -64,4 +62,18 @@ class _Tab1State extends State<Tab1> with AutomaticKeepAliveClientMixin<Tab1> {
   );
   @override
   bool get wantKeepAlive => true;
+}
+
+class Avengers {
+  String name;
+  String action;
+  Avengers({this.name, this.action});
+
+  static List<Avengers> getAvangers() {
+    return <Avengers>[
+      Avengers(name: 'harsh', action: 'tttttttt'),
+      Avengers(name: 'deeep', action: 'rrrrrr'),
+      Avengers(name: 'adeeee', action: 'yyyyyyy')
+    ];
+  }
 }

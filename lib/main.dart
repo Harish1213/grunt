@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Colors.orange
       ),
-      home: AppEnterVC()//LoginVC(title:'login'),
+      home: signUp()//LoginVC(title:'login'),
     );
   }
 
