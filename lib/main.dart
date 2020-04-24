@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:grunt/Controlers/AppEnterVC.dart';
-import 'package:grunt/Controlers/loginVC.dart';
+import 'package:grunt/Controlers/APItest.dart';
+import 'package:grunt/Controlers/testClass.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Colors.orange
       ),
-      home: signUp()//LoginVC(title:'login'),
+      home: SampleApp()//LoginVC(title:'login'),
     );
   }
 

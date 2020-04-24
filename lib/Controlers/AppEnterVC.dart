@@ -216,10 +216,16 @@ class _signUpState extends State<signUp> with SingleTickerProviderStateMixin {
                 },
                 child: Text("Pick Image From Gallery"),
               ),
-            ],
+            ], 
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        tooltip: 'Update Text',
+        child: Icon(Icons.account_circle),
+      ),
+      floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
     );
   }
 }
