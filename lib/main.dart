@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:grunt/Controlers/APItest.dart';
-import 'package:grunt/Controlers/testClass.dart';
+import 'package:grunt/Controlers/Form.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Colors.orange
       ),
-      home: SampleApp()//LoginVC(title:'login'),
+      home: MyCustomForm()//LoginVC(title:'login'),
     );
   }
 
