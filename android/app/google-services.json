@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "111280848544",
+    "firebase_url": "https://fluttergrunt-9bf74.firebaseio.com",
+    "project_id": "fluttergrunt-9bf74",
+    "storage_bucket": "fluttergrunt-9bf74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111280848544:android:1f31c35df9b9dfb7d693c5",
+        "android_client_info": {
+          "package_name": "com.example.grunt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111280848544-gpm814gdti9fi340rjs5ddq09a6lq1uv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLKfm191TkW3tj7t2jzL5Hvg493SDFHCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111280848544-gpm814gdti9fi340rjs5ddq09a6lq1uv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

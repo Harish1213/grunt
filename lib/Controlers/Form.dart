@@ -12,7 +12,7 @@ class MyCustomForm extends StatefulWidget {
 class MyCustomFormState extends State<MyCustomForm> {
   // Create a global key that uniquely identifies the Form widget
   // and allows validation of the form.
-  final _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();  
 
   @override
   Widget build(BuildContext context) {
@@ -60,6 +60,8 @@ class MyCustomFormState extends State<MyCustomForm> {
                 icon: const Icon(Icons.phone),
                 hintText: 'Enter a phone number',
                 labelText: 'Phone',
+                
+              
               ),
               validator: (value) {
                 if (value.isEmpty) {

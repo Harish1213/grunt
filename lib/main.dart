@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:grunt/Controlers/Firelog.dart';
 import 'package:grunt/Controlers/Form.dart';
 
 void main() => runApp(MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Colors.orange
       ),
-      home: MyCustomForm()//LoginVC(title:'login'),
+      home: FireLogin()//LoginVC(title:'login'),
     );
   }
 
