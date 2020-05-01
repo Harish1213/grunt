@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:grunt/Controlers/Firelog.dart';
-import 'package:grunt/Controlers/Form.dart';
+import 'package:grunt/Controlers/FIREBASE/Firelog.dart';
 
 void main() => runApp(MyApp());
 
