@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:grunt/Utilitys/utilites.dart';
+import 'package:grunt/Controlers/MaterialControls/controls.dart';
+
 class FireLogin extends StatefulWidget {
   @override
   _FireLoginState createState() => _FireLoginState();
@@ -17,12 +18,11 @@ class _FireLoginState extends State<FireLogin>
   @override
   void initState() {
     super.initState();
+
     _controller = AnimationController(vsync: this);
   }
 
   void fireBaseUserLogin() async {
-    
-
     showAlertDialog(this.context);
 
     try {
@@ -36,29 +36,28 @@ class _FireLoginState extends State<FireLogin>
     }
   }
 
-  void createFireUser() async{
-        showAlertDialog(this.context);
+  void createFireUser() async {
+    showAlertDialog(this.context);
 
     try {
-      AuthResult _userDate = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: ('$_email'), password: ('$_password'));
+      AuthResult _userDate = await FirebaseAuth.instance
+          .createUserWithEmailAndPassword(
+              email: ('$_email'), password: ('$_password'));
       debugPrint(_userDate.additionalUserInfo.username);
-       Navigator.pop(this.context);
-
+      Navigator.pop(this.context);
     } catch (e) {
-    debugPrint(e.message);
-    Navigator.pop(this.context);
-
+      debugPrint(e.message);
+      Navigator.pop(this.context);
     }
   }
+
   void sendEmail() async {
     try {
       FirebaseAuth.instance.sendPasswordResetEmail(email: ('$_email'));
       debugPrint('yyyyyyy');
-
     } catch (e) {
       debugPrint(e);
       debugPrint(e.message);
-
     }
   }
 
@@ -146,17 +145,18 @@ class _FireLoginState extends State<FireLogin>
                         }
                       },
                       child: Text('Login Accont'),
-                    ),Expanded(child: RaisedButton(
-                      onPressed: () {
-                        _formkey.currentState.save();
-                        if (_formkey.currentState.validate()) {
-                         
-                          sendEmail();
-                        } 
-                        showAlertDialog(this.context);
-                      },
-                      child: Text('Forgot Accont'),
                     ),
+                    Expanded(
+                      child: RaisedButton(
+                        onPressed: () {
+                          _formkey.currentState.save();
+                          if (_formkey.currentState.validate()) {
+                            sendEmail();
+                          }
+                          showAlertDialog(this.context);
+                        },
+                        child: Text('Forgot Accont'),
+                      ),
                     )
                   ]),
             ),
@@ -173,35 +173,32 @@ class _FireLoginState extends State<FireLogin>
   }
 
   showAlertDialog(BuildContext context) {
+    // set up the button
+    Widget okButton = FlatButton(
+      child: Text("OK"),
+      onPressed: () {
+        Navigator.of(context).pop();
+      },
+    );
 
-  // set up the button
-  Widget okButton = FlatButton(
-    child: Text("OK"),
-    onPressed: () { 
-      Navigator.of(context).pop();
-    },
-  );
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Text("My title"),
+      content: Text("This is my message."),
+      actions: [
+        okButton,
+      ],
+    );
 
-  // set up the AlertDialog
-  AlertDialog alert = AlertDialog(
-    title: Text("My title"),
-    content: Text("This is my message."),
-    actions: [
-      okButton,
-    ],
-  );
-
-  // show the dialog
-  showDialog(
-    barrierDismissible: false,
-    context: context,
-    builder: (BuildContext context) {
-      return alert;
-    },
-  );
-}
-
-
+    // show the dialog
+    showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
 
   // @override
   // Widget build(BuildContext context) {
@@ -213,43 +210,9 @@ class _FireLoginState extends State<FireLogin>
   //     ),
   //   );
   // }
-
-  String dropdownValue = 'Two';
-
-@override
-Widget build(BuildContext context) {
-  return Container(
-    padding: EdgeInsets.all(50),
-    child: Material(
-    child:DropdownButton(
-    value: dropdownValue,
-    icon: Icon(Icons.add_comment),
-    iconSize: 24,
-    elevation: 30,
-    style: TextStyle(
-      color: Colors.deepPurple
-    ),
-    underline: Container(
-      height: 2,
-      color: Colors.deepPurpleAccent,
-    ),
-    onChanged: (String newValue) {
-      setState(() {
-        dropdownValue = newValue;
-      });
-    },
-    items: <String>['One', 'Two', 'Free', 'Four']
-      .map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      })
-      .toList(),
-  ),
-  ),);
-
-
+  double _value = 0.0;
+  @override
+  Widget build(BuildContext context) {
+    return listOfcontroles();
+  }
 }
-
-    }
